@@ -2,6 +2,7 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image:url("../Images/bg.jpg")
 }
 
 /* Wrapping element */
@@ -10,6 +11,16 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.transparent{
+    border: 2px solid white;
+    background-color: white;
+    opacity:0.8;
+    padding: 30px 0px 40px 100px;
+    margin:10px 0px 10px 0px;
+    z-index:456;
+}
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 

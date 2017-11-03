@@ -6,14 +6,14 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Winftip Toys</title>
+    <title><%: Page.Title %> - Wingtip Toys</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-   
+
 
 </head>
 <body>
@@ -83,19 +83,19 @@
             <br />
         </div>
 
-        <div id="CategoryMenu" style="text-align:center">
+        <div id="CategoryMenu" style="text-align: center">
             <asp:ListView ID="categoryList"
                 ItemType="WingtipToys.Models.Category"
                 runat="server"
                 SelectMethod="GetCategories">
                 <ItemTemplate>
                     <b style="font-size: large; font-style: normal">
-                        <a href="/ProductList.aspx?id=<%#: Item.CategoryID %>" style="text-decoration:none">
+                        <a href="/ProductList.aspx?id=<%#: Item.CategoryID %>" style="text-decoration: none">
                             <%#: Item.CategoryName %>
-                        </a>                      
+                        </a>
                     </b>
                 </ItemTemplate>
-                <ItemSeparatorTemplate> | </ItemSeparatorTemplate>
+                <ItemSeparatorTemplate>| </ItemSeparatorTemplate>
             </asp:ListView>
         </div>
 
@@ -106,12 +106,12 @@
 
 
         <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-
-
-            </asp:ContentPlaceHolder>
+            <div class="transparent">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
             <hr />
-            <footer>
+            <footer style="color:white">
                 <p>&copy; <%: DateTime.Now.Year %> - Wingtip Toys</p>
             </footer>
         </div>
